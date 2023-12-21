@@ -1,0 +1,615 @@
+<!doctype html>
+<html ⚡ lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <style amp-custom>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+        .body {
+            width: 1600px;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Lato', sans-serif;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media screen and (max-width: 767px) {
+            .body {
+                max-width: 320px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .header {
+            width: 1600px;
+            display: flex;
+            background-image: url("./images/bg.png");
+            flex-direction: column;
+            height: 880px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .header {
+                width: 320px;
+
+            }
+        }
+
+        .header__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 767px) {
+            .header__top {
+                width: 245px;
+
+            }
+        }
+
+        .header__logo {
+            margin-left: 219px;
+            width: 140px;
+            height: 120px;
+            margin-top: 15px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .header__logo {
+                margin-left: 0;
+                width: 70px;
+                height: 60px;
+
+            }
+        }
+
+        .header__links {
+            margin-right: 219px;
+            display: flex;
+            gap: 30px;
+            margin-top: 31px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .header__links {
+                margin-left: 0;
+                width: 70px;
+                height: 60px;
+                margin-right: 0;
+                margin-top: 52px;
+
+            }
+        }
+
+        .header__link {
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+
+            color: #ffffff;
+            font-weight: 700;
+            filter: drop-shadow(-0.891px 0.454px 20px rgba(1, 1, 1, 0.55));
+        }
+
+        .header__bot {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header__title {
+            opacity: 0.702;
+            font-size: 36px;
+            letter-spacing: 2px;
+
+            color: #ffffff;
+            font-weight: bold;
+            font-style: italic;
+            font-family: "Times New Roman", sans-serif;
+            filter: drop-shadow(-0.891px 0.454px 20px rgba(1, 1, 1, 0.55));
+            margin-top: 230px;
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            .header__title {
+                font-size: 20px;
+                width: @width;
+
+            }
+        }
+
+        .header__subtitle {
+            font-size: 100px;
+            letter-spacing: 5px;
+            color: #ffffff;
+            font-weight: 700;
+            filter: drop-shadow(-0.891px 0.454px 20px rgba(1, 1, 1, 0.55));
+            margin-bottom: 0;
+            margin-top: 1px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .header__subtitle {
+                font-size: 30px;
+                width: @width;
+                text-align: center;
+
+            }
+        }
+
+        .header__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header__button {
+            opacity: 1.000;
+            width: 280px;
+            height: 68px;
+            border-radius: 3px;
+            background-color: rgba(246, 150, 121, 0);
+            border: 3px solid #ffffff;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .header__text {
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 30px;
+            color: #ffffff;
+            font-weight: 400;
+            filter: drop-shadow(-0.891px 0.454px 20px rgba(1, 1, 1, 0.55));
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .header__text {
+                font-size: 10px;
+                width: @width;
+                text-align: center;
+            }
+        }
+
+        .info {
+            display: flex;
+            justify-content: center;
+            margin-top: 101px;
+
+        }
+
+        @media screen and (max-width: 767px) {
+            .info {
+                width: 320px;
+                flex-direction: column;
+            }
+        }
+
+        .info__block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .info__img {
+            width: 107px;
+            height: 107px;
+            background-color: aqua;
+            border-radius: 90px;
+        }
+
+        .info__title {
+            font-size: 18px;
+            letter-spacing: 1px;
+            color: #000000;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        .info__stick {
+            margin-top: 10px;
+            width: 88px;
+            height: 1px;
+            background-color: #de0000;
+        }
+
+        .info__text {
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #000000;
+            font-weight: 300;
+            text-align: center;
+            margin-top: 19px;
+            width: 360px;
+            margin-bottom: 100px;
+        }
+
+        .phone {
+            background-color: #f6f6f6;
+            display: flex;
+            justify-content: center;
+            gap: 115px;
+        }
+
+        .phone__img {
+            margin-top: 102px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .phone__img {
+                display: none;
+            }
+        }
+
+        .phone__block {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        @media screen and (max-width: 767px) {
+            .phone__block {
+                width: 320px;
+            }
+        }
+
+        .phone__title {
+            font-size: 18px;
+            letter-spacing: 1px;
+            color: #000000;
+            font-weight: 700;
+            margin-top: 182px;
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            .phone__title {
+                width: @width;
+                font-size: 15px;
+                margin-top: 35px;
+            }
+        }
+
+        .phone__stick {
+            margin-top: 10px;
+            width: 88px;
+            height: 1px;
+            background-color: #de0000;
+        }
+
+        .phone__subtitle {
+            margin-top: 19px;
+            width: 543px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            line-height: 18px;
+            color: #000000;
+            font-weight: 300;
+        }
+
+        @media screen and (max-width: 767px) {
+            .phone__subtitle {
+                width: 300px;
+                font-size: 13px;
+                margin-top: 35px;
+            }
+        }
+
+        .man {
+            height: 462px;
+            background-image: url("./images/brown.png");
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 767px) {
+            .man {
+                width: 320px;
+
+            }
+        }
+
+        .man__image {
+            width: 100px;
+            height: 100px;
+            border-radius: 90px;
+            background-color: #fff;
+            margin-top: 77px;
+        }
+
+        .man__title {
+            width: 1180px;
+            width: 886px;
+            font-size: 30px;
+            color: #ffffff;
+            font-weight: 250;
+            margin-top: 15px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 767px) {
+            .man__title {
+                width: @width;
+                font-size: 15px;
+
+            }
+        }
+
+        .man__adress {
+            width: 1180px;
+
+            font-size: 19px;
+            line-height: 36px;
+            color: #ffffff;
+            font-weight: 250;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .man__krugi {
+            display: flex;
+            gap: 9px;
+            margin-top: 40px;
+        }
+
+        .man__krug {
+            opacity: 0.4;
+            width: 10px;
+            height: 10px;
+            border-radius: 90px;
+            background-color: #fff;
+        }
+
+        .man__krug_white {
+            opacity: 1;
+            width: 10px;
+            height: 10px;
+            border-radius: 90px;
+            background-color: #fff;
+        }
+
+        .food {
+            display: grid;
+            grid-template-columns: 320px 320px 320px 320px 320px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .food {
+                width: @width;
+                font-size: 15px;
+                grid-template-columns: 320px;
+            }
+        }
+
+        .food__img {
+            width: 320px;
+            height: 225px;
+            background-color: #ad3434;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .food__title {
+            opacity: 0.902;
+            font-size: 15px;
+            letter-spacing: 1px;
+            color: #ffffff;
+            font-weight: bold;
+            font-style: italic;
+            font-family: "Times New Roman", sans-serif;
+            filter: drop-shadow(-0.891px 0.454px 20px rgba(1, 1, 1, 0.55));
+            margin: 0;
+        }
+
+        .food__subtitle {
+            font-size: 36px;
+            letter-spacing: 2px;
+            line-height: 13px;
+            color: #ffffff;
+            font-weight: 700;
+            margin-top: 8px;
+            filter: drop-shadow(-0.891px 0.454px 20px rgba(1, 1, 1, 0.55));
+        }
+
+        .counts {
+            display: flex;
+            justify-content: center;
+            gap: 130px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .counts {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+
+        .counts__block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 59px;
+
+        }
+
+        .counts__title {
+            font-size: 36px;
+            letter-spacing: 2px;
+            margin: 0;
+            color: #000000;
+            font-weight: 700;
+
+        }
+
+        .counts__subtitle {
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #000000;
+            font-weight: 300;
+            margin-top: 12px;
+            margin-bottom: 60px;
+        }
+
+    </style>
+    <title>11</title>
+</head>
+<body class="body">
+<div class="header">
+    <div class="header__top">
+        <amp-img src="./images/logo.png" alt="#" class="header__logo" width="auto" height="auto"
+                 layout="responsive"></amp-img>
+        <div class="header__links">
+            <a href="#" class="header__link">LOGIN</a>
+            <a href="#" class="header__link">SIGNUP</a>
+        </div>
+    </div>
+    <div class="header__bot">
+        <div class="header__content">
+            <h1 class="header__title">Find your Favorite</h1>
+            <h2 class="header__subtitle">RECIPES</h2>
+            <button class="header__button">GET STARTED</button>
+            <p class="header__text">OR SEND US YOUR OWN RECIPES AND GET REWARDED!</p>
+        </div>
+    </div>
+</div>
+<div class="info">
+    <div class="info__block">
+        <div class="info__img"></div>
+        <div class="info__title">GET INSPIRED</div>
+        <div class="info__stick"></div>
+        <div class="info__text">Lorem ipsum dolor sit amet, consectetur adipisc
+            Pellentesque vel enim a elit viverra elementuma.
+            Aliquam erat volutpat.
+        </div>
+    </div>
+    <div class="info__block">
+        <div class="info__img"></div>
+        <div class="info__title">GET REWARDED</div>
+        <div class="info__stick"></div>
+        <div class="info__text">Lorem ipsum dolor sit amet, consectetur adipisc
+            Pellentesque vel enim a elit viverra elementuma.
+            Aliquam erat volutpat.
+        </div>
+    </div>
+    <div class="info__block">
+        <div class="info__img"></div>
+        <div class="info__title">GET SOCIAL</div>
+        <div class="info__stick"></div>
+        <div class="info__text">Lorem ipsum dolor sit amet, consectetur adipisc
+            Pellentesque vel enim a elit viverra elementuma.
+            Aliquam erat volutpat.
+        </div>
+    </div>
+</div>
+<div class="phone">
+    <amp-img src="./images/phone.png" alt="Phone" class="phone__img" width="auto" height="auto"
+             layout="responsive"></amp-img>
+    <div class="phone__block">
+        <h2 class="phone__title">INTRODUCING THE FUDI APP</h2>
+        <div class="phone__stick"></div>
+        <p class="phone__subtitle">Morbi eget posuere dolor. Pellentesque cursus aliquet aliquet. Aeneanet
+            felis sit amet diam mollis ullamcorper. Nullam consequat sem a ante vest
+            ibulum tristique. Suspendisse tristique lacus ac mattis porta.
+            <br>
+            Vivamus ligula quam, vehicula non lacinia sed, faucibus sit amet libero. In
+            libero dui, eleifend eu nisi id, egestas fringilla odio. In varius quam a mas
+            sa hendrerit ullamcorper a eu justo. Suspendisse porta mattis convallis.
+            Aenean tempus ligula ac odio rhoncus, quis aliquam dolor accumsan.
+            <br>
+            Suspendisse aliquet felis consectetur libero congue, sed pulvinar diam
+            malesuada. Duis vehicula a nibh id hendrerit. Donec sit amet ultrices
+            ante, a mattis massa. </p>
+    </div>
+</div>
+<div class="man">
+    <div class="man__image"></div>
+    <div class="man__title">“I am so happy because I found this recipe, and it just made my life easier.
+        Thanks so much for sharing!”
+    </div>
+    <div class="man__adress">- Michael Dawson, San Francisco, CA -</div>
+    <div class="man__krugi">
+        <div class="man__krug"></div>
+        <div class="man__krug_white"></div>
+        <div class="man__krug"></div>
+    </div>
+</div>
+<div class="food">
+    <div class="food__img">
+        <div class="food__title">327 Recipes</div>
+        <div class="food__subtitle">ITALIAN</div>
+    </div>
+    <div class="food__img">
+        <div class="food__title">856 Recipes</div>
+        <div class="food__subtitle">INDIAN</div>
+    </div>
+    <div class="food__img">
+        <div class="food__title">27 Recipes</div>
+        <div class="food__subtitle">FRENCH</div>
+    </div>
+    <div class="food__img">
+        <div class="food__title">174 Recipes</div>
+        <div class="food__subtitle">STEAKHOUSE</div>
+    </div>
+    <div class="food__img">
+        <div class="food__title">731 Recipes</div>
+        <div class="food__subtitle">SEAFOOD</div>
+    </div>
+    <div class="food__img">
+        <div class="food__title">237 Recipes</div>
+        <div class="food__subtitle">SUSHI</div>
+    </div>
+    <div class="food__img">
+        <div class="food__title">529 Recipes</div>
+        <div class="food__subtitle">MEXICAN</div>
+    </div>
+    <div class="food__img">
+        <div class="food__title">145 Recipes</div>
+        <div class="food__subtitle">CHINESE</div>
+    </div>
+    <div class="food__img">
+        <div class="food__title">327 Recipes</div>
+        <div class="food__subtitle">PIZZA</div>
+    </div>
+    <div class="food__img">
+        <div class="food__title">1.437 Recipes</div>
+        <div class="food__subtitle">AMERICAN</div>
+    </div>
+</div>
+<div class="counts">
+    <div class="counts__block">
+        <h2 class="counts__title">23,567</h2>
+        <p class="counts__subtitle">Recipes Available</p>
+    </div>
+    <div class="counts__block">
+        <h2 class="counts__title">431,729</h2>
+        <p class="counts__subtitle">Active Users</p>
+    </div>
+    <div class="counts__block">
+        <h2 class="counts__title">892,173</h2>
+        <p class="counts__subtitle">Positive Reviews </p>
+    </div>
+    <div class="counts__block">
+        <h2 class="counts__title">56,581</h2>
+        <p class="counts__subtitle">Photos & Videos</p>
+    </div>
+    <div class="counts__block">
+        <h2 class="counts__title">3,182</h2>
+        <p class="counts__subtitle">Spices and Herbs </p>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/less"></script>
+</body>
+</html>
