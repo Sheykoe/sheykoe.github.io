@@ -10,6 +10,21 @@
     <title>Document</title>
 </head>
 <body class="body">
+<script>
+    // Вывод времени на формирование DOM дерева
+    var domStart = performance.now();
+
+    window.addEventListener('DOMContentLoaded', function () {
+        var domEnd = performance.now();
+        console.log('Время на формирование DOM дерева: ' + (domEnd - domStart) + ' мс');
+    });
+
+    // Вывод времени на отображение страницы
+    window.onload = function() {
+        var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+        console.log('Время на отображение страницы: ' + loadTime + ' мс');
+    };
+</script>   
 <div class="header">
     <div class="header__top">
         <img src="./images/logo.png" alt="#" class="header__logo">
